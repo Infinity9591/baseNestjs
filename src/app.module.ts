@@ -3,22 +3,22 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
 //model
-import { Account } from './account/entities/account.entity';
-import { Role } from './role/entities/role.entity';
-import {Permission} from "./permission/entities/permission.entity";
-import {User} from './user/entities/user.entity'
-import {RolePermission} from './role-permission/entities/role-permission.entity'
-import {TableLog} from './table-log/entities/table-log.entity'
+import { Account } from './module/account/entities/account.entity';
+import { Role } from './module/role/entities/role.entity';
+import { Permission } from './module/permission/entities/permission.entity';
+import { User } from './module/user/entities/user.entity';
+import { RolePermission } from './module/role-permission/entities/role-permission.entity';
+import { TableLog } from './module/table-log/entities/table-log.entity';
 //module
 import { SequelizeModule } from '@nestjs/sequelize';
-import { AccountModule } from './account/account.module';
-import { RoleModule } from './role/role.module';
+import { AccountModule } from './module/account/account.module';
+import { RoleModule } from './module/role/role.module';
 import { ConfigModule } from '@nestjs/config';
-import { PermissionModule } from './permission/permission.module';
-import { RolePermissionModule } from './role-permission/role-permission.module';
-import { SiteModule } from './site/site.module';
-import { TableLogModule } from './table-log/table-log.module';
-import { UserModule } from './user/user.module';
+import { PermissionModule } from './module/permission/permission.module';
+import { RolePermissionModule } from './module/role-permission/role-permission.module';
+import { SiteModule } from './module/site/site.module';
+import { TableLogModule } from './module/table-log/table-log.module';
+import { UserModule } from './module/user/user.module';
 
 @Module({
     imports: [
@@ -40,7 +40,7 @@ import { UserModule } from './user/user.module';
         TableLogModule,
         UserModule,
     ],
-    controllers: [AppController],
-    providers: [AppService],
+    // controllers: [AppController],
+    // providers: [AppService],
 })
 export class AppModule {}
